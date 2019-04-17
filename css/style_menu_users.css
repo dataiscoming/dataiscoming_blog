@@ -1,0 +1,107 @@
+/* Style of the menu */
+
+.menu-section {  
+	height: 7%;
+	width: 100%;
+	display: flex;
+	background-color: #333; /*black*/
+}
+
+.menu-left, .menu-right  {
+	float: left;
+	width: 20%;
+}
+.menu-center {
+	float: left;
+	width: 60%;
+}
+
+.menu-center ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	text-align: center;
+}
+
+.menu-center li{
+    float: left;
+	height:100%;
+	width: 12%;
+	text-align:center;
+}
+
+.menu-center li a ,.menu-center #tab-dropdown button {
+    color: white;
+    text-align: center;
+	padding: 19% 0%;
+    text-decoration: none;
+	height:100%;
+	width:100%;
+}
+
+.menu-center a, buttton {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+	font-family: Fondamento;
+	color:black;
+	font-variant: normal;
+	font-weight: 400; 
+	line-height: 20px; 
+}
+
+#tab-dropdown {
+    float: left;
+    overflow: hidden;
+	width: 12%;
+	height:100%;
+}
+
+#tab-dropdown #tab-dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    margin: 0;
+	font-family: Fondamento;
+	ont-style: normal;
+	font-variant: normal;
+	font-weight: 400; 
+	line-height: 20px; 
+}
+
+.menu-center a:hover, #tab-dropdown:hover #tab-dropbtn, li:hover {
+    background-color: #e6e6e6;
+	color: black;
+}
+
+#tab-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 137px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#tab-dropdown-content a {
+    float: none;
+    color: black;
+	padding: 19% 19%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+#tab-dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#tab-dropdown:hover #tab-dropdown-content {
+    display: block;
+}
