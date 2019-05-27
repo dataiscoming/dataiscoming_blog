@@ -1,8 +1,7 @@
  <div class='body-center-left'>
 
 	<?php
-
-	// Connextion to the database
+	// Connexion to the database
 	include('../database/db_open.php');
 
 	// Setting the variable to identify the post chosen
@@ -83,7 +82,7 @@
 		}else{
 			echo "There is a mistake!" ;
 		}
-         ?>
-		</div>             
+		 ?>
+		</div>          
 	</div>         
 </div>

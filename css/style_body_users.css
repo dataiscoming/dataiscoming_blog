@@ -5,24 +5,23 @@
 	display: flex;
 	width: 100%;
 	flex-flow: row nowrap;
-	height:70%;
 }
 
 .body-side-left {
-  float: left;
+ 	float: left;
 	width: 20%;
 	background-color: #FFF9EA; /*#FFF9EA*/
 }
 
 .body-center {
-	float: left;
+	/*float: left;*/
 	width: 60%;
 	background-color: #FFF9EA; /*gris */
 	display: flex;
 }
 
 .body-center-left{
-  	width: 80%;
+	  width: 80%;
 }
 
 .body-posts {
@@ -42,7 +41,7 @@
 
 .date-post {
 	background-color: #FFF9EA; /*FFF9EA;*/
-	/*dth: 100%;*/
+	/*width: 100%;*/
 	padding: 0% 0% 0% 1%;
 }
 
@@ -53,6 +52,7 @@
 }
 
 .body-center-right{
+	width:100%;
 	width: 20%;
 	background-color: #FFF9EA;
 	float: left;

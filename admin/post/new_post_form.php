@@ -3,8 +3,8 @@
 		
 		<?php
 		// Header and menu sections for the admin
-		include('../../layout/admin/header_admin.php') 
-		include('../../layout/admin/menu_admin.php') 
+		include('../../layout/admin/header_admin.php'); 
+		include('../../layout/admin/menu_admin.php');
 		?>
 		
 		<div id="index_admin">
