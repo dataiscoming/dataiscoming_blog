@@ -1,68 +1,63 @@
-# dataiscoming_blog
+# Blog : data Is Coming
 
-One Paragraph of project description goes here
+![Algorithm schema](./pictures/logo.png)
 
-## Getting Started
+This project aimed to allow me to progress and discover devlopment of web-app. My first idea was to use Wordpress to create a blog. And it was a good idea actually. But, I wished to pratice and code. Then, I decided to begin from the start : Html, css. Then, I added Php, sql and a bit og javascript. Even if I have produced a stable version, this blog is to evovle to test and try other technologies and languages. As a summary, i would say it is as a laboratory, a training project. You are free to use these codes if you need help for coding web-app. 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+## Table of contents
+* [Features](#features)
+* [Technologies](#technologies)
+* [Launch](#launch)
+* [Running the tests](#running-the-tests)
+* [Project status](#project-status)
+* [Versioning](#versioning)
+* [Authors](#authors)
+* [License](#license)
+* [Sources](#sources)
+
+## Features
+
+### Users
+* Read a post
+* Read and write some comments
+* Access the post through the most recent, the category, or a search bar
+
+### Administrator
+* Write, Mofify, delete a post
+* Enter a new category
+* Manage the status of the blog (Online or Maintenance)
+* Upload some media (pictures)
+
+## Technologies
+* HTML
+* CSS
+* PHP
+* SQL
+* JAVASCRIPT
+
+## Launch
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+You have to set up the environnement for web-dev. I propose to use mine. here is the list of software I use :
+* GitHub Desktop or the Git system of your choice
+* VS Code (Or another IDE to write code)
+* Xampp (httpd.conf reconfigured)
 
 ### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
 Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+## Project status 
 
-Explain what these tests test and why
+### To do
+* Re-do the design of the comments
+* Set up the CSS style for code  
+* Create a newsletter
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
+### Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
@@ -72,16 +67,20 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Quentin Mouton** - *Initial work* - [dataiscoming](https://github.com/dataiscoming)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/dataiscoming/dataiscoming_blog/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
+## Sources   
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+
+
+
+
+
+
+
