@@ -79,5 +79,7 @@ This project is licensed under the GNU General Public License v3.0 License - see
 ## Sources   
 
 [Contributing](https://gist.github.com/PurpleBooth/b24679402957c63ec426)
+
 [ReadMe](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) from PurpleBooth
+
 [ReadMe](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project) from bulldogjob
