@@ -41,7 +41,7 @@ This project aimed to allow me to progress and discover development of web-app. 
 
 You have to set up the environment for web-development. I propose to use mine, here is the list of software I use :
 * [GitHub Desktop](https://desktop.github.com/)
-* [VS Code](https://code.visualstudio.com/ as IDE
+* [VS Code](https://code.visualstudio.com/) as IDE
 * [Xampp](https://www.apachefriends.org/fr/index.html) (with httpd.conf reconfigured)
 
 ### Setup
