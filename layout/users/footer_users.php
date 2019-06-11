@@ -9,6 +9,7 @@
 
 		<!-- Explore section -->
 		<div class="footer-explore">
+		<br>
 		<p>Explore</p>
 			<span>
 				<!-- Link to the Home -->
@@ -20,6 +21,7 @@
 
 		<!-- Follow section -->
 		<div class="footer-follow">
+		<br>
 		<p>Follow</p>
 			<span>
 				<!-- Link to linkedin page -->

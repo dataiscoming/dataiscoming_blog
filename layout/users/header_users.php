@@ -1,6 +1,9 @@
 <!-- Header section of the visible website for the users (not the admin part) -->
 <div class='header-section'>
 	
+	<!-- check if the website is not under maintenance -->
+	<?php include('../layout/users/check_permission_users.php');?>	
+
 	<!-- Meta -->
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta http-equiv="Cache-Control" content="no-cache" /> 
@@ -13,7 +16,10 @@
 	<link href="../css/style_menu_users.css" media="all" rel="stylesheet" type="text/css"/> <!-- style of the menu -->
 	<link href="../css/style_body_users.css" media="all" rel="stylesheet" type="text/css"/> <!-- style of the menu -->
 	<link href="../css/style_footer_users.css" media="all" rel="stylesheet" type="text/css"/>  <!-- style of the menu -->
-	
+	<?php 
+	include "../css/style_R_code.php";  // style of R code 
+	?>
+
 	<!-- Title, logo and description of the website -->
 	<link rel="icon" type="image/png" href="../pictures/logo.png" /> 
     <title>Data Is Coming</title>
@@ -24,9 +30,6 @@
 	<div class='header-center'>		
 		<h1 id='title-header'>Data Is Coming</h1>
 	</div>
-	
-	<!-- check if the website is not under maintenance -->
-	<?php include('../layout/users/check_permission_users.php');?>
 	
 	<!-- Use of Mathjax to write some LaTex formula -->
 	<script type="text/javascript" async
