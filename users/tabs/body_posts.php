@@ -1,5 +1,5 @@
 <div class='body-center-left'>
-	<?php
+<?php
 	// Connection to the database and get all the posts
 	include('../database/db_open.php');
 	
@@ -22,7 +22,7 @@
 			$page = 1;
 		}
 		
-		//
+		// 
 		$FirstMessage = ($page - 1) * $PostPerPage; 
 						
 		// Get the posts selected
@@ -51,26 +51,26 @@
 			$mess_titre = preg_replace('#&gt;#','>', $mess_titre);
 			echo "<div class='body-title'>
 			". $mess_titre ."</div>";
-			?>
-							
-        <!-- The date of creation and modification of the post. The date of modification may not be shown if there is not some-->
-		<div class='date-post'>
-			<p>Created the
-			<?php echo date('d/m/Y ', $data['timestamp']); ?> at
-			<?php echo date('H\hi', $data['timestamp']); 
-			if($data['timestamp_modif'] != 0){
-				?> <br> Modified the
-				<?php echo date('d/m/Y ', $data['timestamp_modif']); ?> at
-				<?php echo date('H\hi', $data['timestamp_modif']); }
-			else{}  ?></p>
-		</div>
+			
+			?>				
+        	<!-- The date of creation and modification of the post. The date of modification may not be shown if there is not some-->
+			<div class='date-post'>
+				<p>Created the
+				<?php echo date('d/m/Y ', $data['timestamp']); ?> at
+				<?php echo date('H\hi', $data['timestamp']); 
+				if($data['timestamp_modif'] != 0){
+					?> <br> Modified the
+					<?php echo date('d/m/Y ', $data['timestamp_modif']); ?> at
+					<?php echo date('H\hi', $data['timestamp_modif']); }
+				else{}  ?></p>
+			</div>
               
-		<?php
-		//The corpus of the posts 
-		$mess = nl2br($data['corpus']);       
-		echo "<div class='body-post-corpus'>"."<p align='justify'>".substr($mess,19,strpos($mess, '.',1000)-18)."</p>"/*htmlspecialchars_decode($mess)*/."
-		<a href='../users/index_users.php?&page=post&id_post=".$data['id']."'>Read more...</a></div>";
-		?>
+			<?php
+			//The corpus of the posts 
+			$mess = nl2br($data['corpus']);       
+			echo "<div class='body-post-corpus'>"."<p align='justify'>".substr($mess,19,strpos($mess, '.',1000)-18)."</p>"/*htmlspecialchars_decode($mess)*/."
+			<a href='../users/index_users.php?&page=post&id_post=".$data['id']."'>Read more...</a></div>";
+			?>
 		</div>
         
 		<?php
