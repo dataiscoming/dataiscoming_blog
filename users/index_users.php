@@ -1,48 +1,36 @@
-<html>
-	<body>
-		
-	<!-- Container for the whole page, useful to avoid the blanks all around -->
-		<div id="container">
-			
-			<?php 
-				// Header section
-				include("../layout/users/header_users.php");
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 
-				// Menu section
-				include("../layout/users/menu_users.php");
-			?>
+	<?php
+	include('../layout/users/global_header_users.php');
+	?>
 
-			<div class='body-section'>
-				
-				<!-- Left side part -->
-				<div class='body-side-left'></div>
-				
-				<!-- Main part of the page : articles -->
-				<div class='body-center'>
-				
-					<?php
-					// Body section 
-					include("../users/tabs/body_".$_GET['page'].".php");
-				
-					// Right side section 
-					include("../layout/users/right_side_users.php");
-					?>
-				</div>
-		
-				<!-- Right side part -->
-				<div class='body-side-right'></div>
+<body class="homepage">
 
-			</div>
+	<?php
+	include('../layout/users/preloader_users.php');
+	?>
 
-		<div id="push">
-			<br><br><br><br>
-		<div>
+	<?php
+	include('../layout/users/header_users.php');
+	?>
+	
+	<?php
+	include('../layout/users/hero_users.php');
+	?>
 
-		<?php // Footer section 
-			include("../layout/users/footer_users.php");
-		?>
-		</div>
-		
-	</body>
+	<?php
+	include('../users/journal_users.php');
+	?>
 
-</html>																																																	
+	<?php
+	include('../layout/users/footer_users.php');
+	?>
+
+</body>
+
+</html>

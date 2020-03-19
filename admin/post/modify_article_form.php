@@ -49,7 +49,7 @@
 			echo"<input type='checkbox' name='category[]' value=".$data['id_cat']." /><label for=".$data['id_cat'].">".$data['category']."</label><br />";
 			}}
 	?>
-					<input type="submit" name="action" value="Preview" formtarget="_blank"/> - 
+					<!--<input type="submit" name="action" value="Preview" formtarget="_blank"/> - -->
 					<input type="hidden" name="id_modif" value="<?php  echo "$id"; ?>">
 					<input type="submit" name="action" value="Send" /> - <input type="reset" value="Cancel" />         
 				</center>

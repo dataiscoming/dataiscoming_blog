@@ -1,7 +1,7 @@
 <?php
 	/* Setting the parameters to connect to the database*/
-	$host='localhost'; /* Host of the server */
-	$dbname='dataiscoming'; /* Database name */
+	$host='localhost:3310'; /* Host of the server */
+	$dbname='dataiscowtdic'; /* Database name */
 	$user='root'; /* User */
 	$pwd=''; /* Password */
 	
@@ -10,6 +10,6 @@
 		$con = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $user, $pwd);
 	}
 	catch(Exception $e){
-		die('Erreur : '.$e->getMessage());
+		die('Error of connection to the Database : '.$e->getMessage());
 	}
 ?>	

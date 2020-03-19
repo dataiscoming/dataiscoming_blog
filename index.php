@@ -15,7 +15,7 @@
 		if($status['eta']== ".MAINT."){
 		header("Location: maintenance.php");}
 		else {
-		header("Location: ../users/index_users.php?page=posts");
+		header("Location: ../users/index_users.php");//?page=posts
 		}
 		
 	?>

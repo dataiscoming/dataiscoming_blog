@@ -1,46 +1,46 @@
-<!-- Footer section of the website (not admin part)-->
-<div class='footer-section'>
-	
-	<!-- left side of the footer section - empty -->
-	<div class="footer-left"></div>
-	
-	<!-- List of differents links , according the thema -->  
-	<div class="footer-center">
+   <!-- Footer
+   ================================================== -->
+   <footer>
 
-		<!-- Explore section -->
-		<div class="footer-explore">
-		<br>
-		<p>Explore</p>
-			<span>
-				<!-- Link to the Home -->
-				<a href='../users/index_users.php?page=posts'>Home</a><br>
-				<!-- Link to the admin connector -->
-				<a href='../admin/login/login_admin_form.php'>Admin</a><br>
-			</span>
-		</div>
+      <div class="row">       
 
-		<!-- Follow section -->
-		<div class="footer-follow">
-		<br>
-		<p>Follow</p>
-			<span>
-				<!-- Link to linkedin page -->
-				<a href='https://www.linkedin.com/in/quentin-mouton-a4397b82/'>Linkedin</a><br>
-				<!-- Link to github page -->
-				<a href='https://github.com/dataiscoming'>Github</a><br>
-			</span>	
-		</div>
-		<br>
-		
-		<!-- Legal section - empty  -->
-		<div class="footer-legal"></div>
-	</div>
-	
-	<!-- left side of the footer section - empty -->
-	<div class="footer-left"></div>
-	
-	<?php
-		/* Close the connection with the database*/
-		include("../database/db_close.php");
-	?>
-</div>
+         <div class="six columns tab-whole footer-about">
+				
+				<h3>About Data is coming</h3>
+               
+            <p>A blog about Game Of Thrones and data science
+            </p>      
+
+         </div> <!-- /footer-about -->
+
+         <div class="six columns tab-whole right-cols">
+
+            <div class="row">
+
+               <div class="columns">
+                  <h3 class="address">Contact me</h3>
+
+                  <ul>
+                    <li><a href="mailto:quentin.mouton@laposte.net">quentin.mouton@laposte.net</a></li>
+                  </ul>                  
+               </div> <!-- /columns -->             
+
+               <div class="columns last">
+                  <h3 class="contact">Follow me</h3>
+
+                  <ul>
+                     <li><a href="https://github.com/dataiscoming">Github</a></li>
+					  <li><a href="../admin/login/login_admin_form.php">Administrator</a></li>
+                  </ul>
+                  
+               </div> <!-- /columns --> 
+
+            </div> <!-- /Row(nested) -->
+
+         </div>
+
+         <p class="copyright">&copy; Copyright 2014 Puremedia. Design by Styleshout.</p>        
+
+      </div> <!-- /row -->
+
+   </footer> <!-- /footer -->
