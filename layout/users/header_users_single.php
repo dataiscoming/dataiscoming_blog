@@ -5,7 +5,7 @@
    	<div class="row header-inner">
 
 	      <div class="logo">
-	         <a href="../index_users.php">
+	         <a href="../users/index_users.php#hero">
 			 <img src="../pictures/logo.png">
 			 </a>
 	      </div>
