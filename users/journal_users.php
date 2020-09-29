@@ -25,7 +25,7 @@
 			include('../database/db_open.php');
 	
 			// Number of posts in the pages 
-			$PostPerPage = 3;
+			$PostPerPage = 5;
 			
 			// Query to count the number of post with the status published
 			$query="select * from posts where status_post='published' "; 
@@ -61,8 +61,10 @@
 	                              
 	            <p>
 				<?php 
-				$mess = nl2br($data['corpus']);	
-				echo substr($mess,0,strpos($mess, '.',100));
+				#$mess = nl2br($data['corpus']);	
+				#echo substr($mess,0,strpos($mess, '.',100));
+				$mess = nl2br($data['abstract']);
+				echo "<p justify='align'>".$mess."</p>";
 				?>
 	            </p>
 	                        

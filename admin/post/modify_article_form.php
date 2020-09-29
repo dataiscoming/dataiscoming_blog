@@ -32,9 +32,11 @@
 				<center>
 					<br>
 					Title : <br>
-					<input type="text" name="title_modif" value="<?php  echo $data['title']; ?>" size="30"><br />
+					<input type="text" name="title_modif" value="<?php  echo $data['title']; ?>" size="60"><br />
+					Abstract :<br/>
+					<textarea name="abstract_modif" cols="150" rows="5" id="com"/><?php echo $data['abstract']?></textarea><br>
 					Corpus :<br/>
-					<textarea name="corpus_modif" cols="80" rows="20" id="commentaire"><?php echo $data['corpus'];?></textarea><br>
+					<textarea name="corpus_modif" cols="150" rows="30" id="commentaire"><?php echo $data['corpus'];?></textarea><br>
 					<select name="status_post" id="status_post">
 							<option value="saved">Saved</option>
 							<option value="published">Published</option>
@@ -48,7 +50,7 @@
 			while ($data= $req ->fetch(PDO::FETCH_ASSOC)){
 			echo"<input type='checkbox' name='category[]' value=".$data['id_cat']." /><label for=".$data['id_cat'].">".$data['category']."</label><br />";
 			}}
-	?>
+					?>
 					<!--<input type="submit" name="action" value="Preview" formtarget="_blank"/> - -->
 					<input type="hidden" name="id_modif" value="<?php  echo "$id"; ?>">
 					<input type="submit" name="action" value="Send" /> - <input type="reset" value="Cancel" />         

@@ -6,7 +6,10 @@
 		// Header part for the admin
 		include('../../layout/admin/header_admin.php');
 		
-		if (isset($_POST['title_new']) AND isset($_POST['corpus_new']) AND isset($_POST['status_post']) AND $_POST['title_new'] != NULL AND $_POST['corpus_new'] != NULL AND $_POST['status_post'] != NULL){
+		if (isset($_POST['title_new']) AND isset($_POST['corpus_new']) AND 
+		isset($_POST['status_post']) AND $_POST['title_new'] != NULL AND 
+		$_POST['corpus_new'] != NULL AND $_POST['status_post'] != NULL AND 
+		$_POST['abstract_new'] != NULL AND isset($_POST['abstract_new'])){
 			
 			// Connection to the database
 			include('../../database/db_open.php');
@@ -22,18 +25,21 @@
 			$time = time();
 			$status_post = $_POST['status_post']; 
 			if($data == NULL){
-			$id_new = '1';}
+				$id_new = '1';}
 			else {$id_new = intval($data['0']['0']) + 1;}
+			$abstract_new = $_POST['abstract_new'];
 			
-			// Sending the new post into the database
-			$query = $con->prepare("INSERT INTO posts VALUES(:id_new, :title_new, :corpus_new, :time,'''',:status_post)");
+			// Sending the new post into the table POSTS into the database
+			$query = $con->prepare("INSERT INTO posts VALUES(:id_new, :title_new, :corpus_new, :time,'''',:status_post,:abstract_new)");
 			$query->bindValue('id_new', $id_new, PDO::PARAM_STR);
 			$query->bindValue('title_new', $title_new, PDO::PARAM_STR);
 			$query->bindValue('corpus_new', $corpus_new, PDO::PARAM_STR);
 			$query->bindValue('time', $time, PDO::PARAM_STR);
 			$query->bindValue('status_post', $status_post, PDO::PARAM_STR);
+			$query->bindValue('abstract_new', $abstract_new, PDO::PARAM_STR);
 			$query->execute();
 			
+			// Sending the categories of the new post into the table LINK_CATEGORY_POST into the database
 			for($i =0;$i < count($_POST['category']);$i++){ 
 				$id_cat = $_POST['category'][$i];
 				$query2 = $con->prepare("INSERT INTO link_category_post VALUES(:id_post, :id_cat, :dt)");

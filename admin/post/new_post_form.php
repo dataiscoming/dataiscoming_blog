@@ -14,9 +14,11 @@
 				<form action="new_post_action.php" method="post">
 					<center>
 						Title : <br/>
-						<input type="text" name="title_new" size="30" /><br />
+						<input type="text" name="title_new" size="60" /><br />
+						Abstract :<br/>
+						<textarea name="abstract_new" cols="150" rows="5" id="com"/></textarea><br>
 						Corpus :<br/>
-						<textarea name="corpus_new" cols="80" rows="20" id="com"><?php echo "<p align='justify'></p>" ?></textarea><br>
+						<textarea name="corpus_new" cols="150" rows="30" id="com"><?php echo "<p align='justify'></p>" ?></textarea><br>
 						<?php
 						// Connexion to the database 
 						include('../../database/db_open.php');
