@@ -48,7 +48,7 @@ body {
 /* Links
 ---------------------------------------------------------------------- */
 a, a:visited {
-	color: #cadde1;
+	color: #9bb7bd /*#cadde1*/;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
@@ -56,7 +56,7 @@ a, a:visited {
 	transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus {
-	color: black;
+	color: #31484d;
 }
 
 /* Typography
@@ -410,7 +410,7 @@ input[type="button"]:hover {
 	background: #cadde1;
 }
 .button.primary:hover, button.primary:hover {
-	background: #e3520d;
+	background: #c3d7db;
 }
 button.medium, .button.medium {
 	font: 15px/30px "raleway-bold", sans-serif;
@@ -565,7 +565,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
-
 
 /* 
 /* f. Other Components
@@ -1370,11 +1369,11 @@ hr {
 #hero-slider .flex-caption h1 a {
 	color: white;
 	display: inline-block;
-	border-bottom: 1px solid #a43b0a;
+	border-bottom: 1px solid #396770;
 }
 #hero-slider .flex-caption h1 span:hover, 
 #hero-slider .flex-caption h1 a:hover {
-	border-color: #9a9103;
+	border-color: #396770;
 }
 #hero-slider .flex-caption .button.stroke {
 	margin: 0;
@@ -1382,7 +1381,7 @@ hr {
 	width: auto;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	border-color: #d44d0d;
+	border-color: #396770;
 	color: white;
 	white-space: nowrap;
 	text-shadow: 0 0px 5px black;
@@ -1393,7 +1392,7 @@ hr {
 #hero-slider .flex-caption .button.stroke:hover {
 	color: white;
 	text-shadow: none;
-	background: #d44d0d !important;
+	background: #396770 !important;
 }
 
 /* Slider Control Nav */
@@ -1427,10 +1426,10 @@ hr {
 	box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 .hero-content .flex-control-paging li a:hover {
-	border-color: #cadde1;
+	border-color: #396770;
 }
 .hero-content .flex-control-paging li a.flex-active {
-	border-color: #cadde1;
+	border-color: #396770;
 	cursor: default;
 }
 

@@ -23,7 +23,7 @@
 					   <li>						
 							<div class="flex-caption">
 								<h1>Use of the universe of G.R.R.Martin to illustrate some data science concepts.</h1> 
-								<p><a class="button stroke smoothscroll" href="#journal">See my works</a></p>									   
+								<p><a class="button stroke smoothscroll" href="#journal">See my works</a></p>								   
 							</div>					
 					   </li>
 
@@ -39,7 +39,7 @@
 					   <li>						
 							<div class="flex-caption">
 								<h1>Take a look at some of my works and projects or contact me to discuss how I can help you.</h1>	
-								<p><a class="button stroke smoothscroll" href="#journal">See my works</a></p>									   
+								<p><a class="button stroke smoothscroll" href="#journal">See my works</a></p>							   
 							</div>					
 					   </li> 
 					   
