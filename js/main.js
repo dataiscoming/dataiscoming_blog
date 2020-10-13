@@ -105,51 +105,34 @@
 
 
   	/*----------------------------------------------------*/
-  	/* Smooth Scrolling
+  	/* Smooth Scrolling and  Highlight the current section in the navigation bar
   	------------------------------------------------------ */
-  	$('.smoothscroll').on('click', function (e) {
-	 	
-	 	e.preventDefault();
 
-   	var target = this.hash,
-    	$target = $(target);
-
-    	$('html, body').stop().animate({
-       	'scrollTop': $target.offset().top
-      }, 800, 'swing', function () {
-      	window.location.hash = target;
-      });
-
-  	});
-
-
-  	/*----------------------------------------------------*/
-  	/* Highlight the current section in the navigation bar
-  	------------------------------------------------------*/
-	var sections = $("section"),
-	navigation_links = $("#nav-wrap a");
-
-	if($("body").hasClass('homepage')) {
-
-		sections.waypoint( {
-
-	      handler: function(event, direction) {
-
-			   var active_section;
-
-				active_section = $(this);
-				if (direction === "up") active_section = active_section.prev();
-
-				var active_link = $('#nav-wrap a[href="#' + active_section.attr("id") + '"]');
-
-	         navigation_links.parent().removeClass("current");
-				active_link.parent().addClass("current");
-
-			},
-			offset: '25%'
-		});
-
+	function checkActiveSection()
+	{
+		var fromTop = jQuery(window).scrollTop() ;
+		jQuery('.section').each(function(){
+			var sectionOffset = jQuery(this).offset() ;
+			if ( sectionOffset.top <= fromTop )
+			{
+				jQuery('#nav-wrap li').removeClass('current') ;
+				jQuery('#nav-wrap li[data-id="'+jQuery(this).data('id')+'"]').addClass('current') ;
+            
+			}
+		}) ;
 	}
+
+	jQuery(window).scroll(checkActiveSection) ;
+	jQuery(document).ready(checkActiveSection) ;
+	jQuery('#nav-wrap li a').click(function(e){
+		var idSectionGoto = jQuery(this).closest('li').data('id') ;
+		$('html, body').stop().animate({
+		scrollTop: jQuery('.section[data-id="'+idSectionGoto+'"]').offset().top
+		}, 300,function(){
+			checkActiveSection() ;
+		});
+		e.preventDefault() ;
+	}) ;
 
    /*----------------------------------------------------*/
   	/* Flexslider

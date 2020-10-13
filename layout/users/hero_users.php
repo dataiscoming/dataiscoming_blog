@@ -1,6 +1,7 @@
    <!-- Hero
    =================================================== -->
-   <section id="hero">	
+   
+   <section id="hero" data-id="hero" class="section">	
    	  
 		<div class="row hero-content">
 

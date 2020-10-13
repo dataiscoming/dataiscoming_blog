@@ -1,6 +1,6 @@
    <!-- journal
    =================================================== -->
-   <section id="journal">
+   <section id="journal" data-id="journal" class="section">
 
 	   <div class="row section-head">
 

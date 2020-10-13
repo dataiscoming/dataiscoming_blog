@@ -35,5 +35,5 @@
 <script src="../js/jquery.flexslider.js"></script>
 <script src="../js/jquery.fittext.js"></script>
 <script src="../js/backstretch.js"></script> 
-<script src="../js/waypoints.js"></script>  
-<script src="../js/main.js"></script>
+<script src="../js/waypoints.js"></script>
+<script src="../js/main.js"></script> 

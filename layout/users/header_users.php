@@ -1,17 +1,18 @@
     <link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/media-queries.css">    
+    <link rel="stylesheet" href="../css/media-queries.css">  
    <!--<link rel="stylesheet" href="../css/style_R_code.css">  -->
    
-
    <!-- Header
    =================================================== -->
    <header id="main-header">
+   
+   <div id="log"></div>
 
    	<div class="row header-inner">
 
 	      <div class="logo">
-	         <a class="smoothscroll" href="#hero">
+	         <a class="smoothscroll" href="../users/index_users.php#hero">
 			 <img src="../pictures/logo.png">
 			 </a>
 	      </div>
@@ -28,12 +29,12 @@
          	</a>         
 
 	         <ul id="nav" class="nav">
-	            <li class="current"><a class="smoothscroll" href="#hero">Home.</a></li>
-	            <li><a class="smoothscroll" href="#journal">Blog.</a></li>	            
+	            <li data-id="hero" class="current"><a class="smoothscroll" href="../users/index_users.php#hero">Home.</a></li>
+	            <li data-id="journal" class=""><a class="smoothscroll" href="../users/index_users.php#journal">Blog.</a></li>	            
 	         </ul> 
 
 	      </nav> <!-- /nav-wrap -->	      
 
 	   </div> <!-- /header-inner -->
 
-   </header> 
+   </header>
