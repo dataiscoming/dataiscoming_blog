@@ -9,7 +9,6 @@
 		
 		<div id="index_admin">
 			<div id="commentaire">
-				
 				<!-- Form for the title and corpus of the new article -->
 				<form action="new_post_action.php" method="post">
 					<center>
@@ -18,7 +17,11 @@
 						Abstract :<br/>
 						<textarea name="abstract_new" cols="150" rows="5" id="com"/></textarea><br>
 						Corpus :<br/>
-						<textarea name="corpus_new" cols="150" rows="30" id="com"><?php echo "<p align='justify'></p>" ?></textarea><br>
+						<textarea name="corpus_new" cols="150" rows="30" id="com"><?php echo "<p align='justify'></p>" ?></textarea></br></br>
+						<select name="status_post" id="status_post">
+							<option value="saved">Saved</option>
+							<option value="published">Published</option>
+						</select></br></br>
 						<?php
 						// Connexion to the database 
 						include('../../database/db_open.php');
@@ -29,18 +32,25 @@
 				
 						// Condition : the query worked well
 						if($query==TRUE){
-				
+							$count = 1;
+							echo "<table><tr>";
+							
 							// Loop to show a checkbox for each category in the database
 							while ($data= $query ->fetch(PDO::FETCH_ASSOC)){
-								echo"<input type='checkbox' name='category[]' value=".$data['id_cat']." /><label for=".$data['id_cat'].">".$data['category']."</label><br />";
+								echo"<td><label for=".$data['id_cat'].">".$data['category']."</label></td>
+								<td><input type='checkbox' name='category[]' value=".$data['id_cat']." /></td>";
+							
+								if($count%4==0){
+								echo "</tr><tr>";
 							}
+							$count = $count+1;
+							}
+							
+							echo "</tr></table></br>";
 						}
 						?>
-						<select name="status_post" id="status_post">
-							<option value="saved">Saved</option>
-							<option value="published">Published</option>
-						</select> -
-						<input type="submit" name="action" value="Preview" formtarget="_blank" /> - 
+						</br>
+						<!--<input type="submit" name="action" value="Preview" formtarget="_blank" /> - -->
 						<input type="submit" name="action" value="Send" /> -
 						<input type="reset" value="Cancel" />         
 					</center>
