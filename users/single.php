@@ -1,3 +1,11 @@
+<?php // Import the permission check
+include('../layout/users/check_permission_users.php');
+?>
+
+<?php // Save the session and store it to the cookies
+include('../layout/users/Save_session.php')
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
@@ -5,7 +13,7 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
 
-	<?php
+	<?php // Import the Headers common to the index users and single screens
 	include('../layout/users/global_header_users.php');
 	?>
 
@@ -13,12 +21,12 @@
 
 	<div id="top"></div>
 
-	<?php
+	<?php // Import the preloader screen
 	include('../layout/users/preloader_users.php');
 	?>
 
-	<?php
-	include('../layout/users/header_users_single.php');
+	<?php // Import the headers for the users screen
+	include('../layout/users/header_users.php');
 	?>
 
 
@@ -43,7 +51,7 @@
    <!-- Content
    ================================================== -->
    
-   	<?php
+   	<?php // Set the style for R code in posts
 	include('../css/style_R_code.php');
 	?>
    
@@ -59,7 +67,6 @@
 	$req->bindValue('id_post', $id_post, PDO::PARAM_STR);
 	$req->execute();
 	$data= $req ->fetch(PDO::FETCH_ASSOC);
-	
 	?>
    
    <section id="content">
@@ -72,15 +79,17 @@
 
 					<header class="entry-header">
 
+						<!-- Show the title of the post -->
 						<h1 class="entry-title">
 							<?php echo $data['title']; ?>
 						</h1> 				 
 						
 						<div class="entry-meta">
 							<ul>
+								<!-- Show the date of the post -->
 								<li><?php echo date('d/m/Y ', $data['timestamp']); ?></li>
 								<span class="meta-sep">•</span>			
-								<?php 
+								<?php // Show the tags of the post 
 								$req = $con->prepare("
 								SELECT t3.*
 								FROM 
@@ -106,7 +115,7 @@
 					</header>
 						
 					<div class="entry-content">
-						
+					<!-- Show the corpus of the post -->	
 					<?php echo nl2br($data['corpus']); ?>	
 						
 					</div> 
@@ -114,7 +123,7 @@
 	  			   </p>
 
 	  			   <div class="pagenav group">
-				   <?php 
+				   <?php // Show the navigation panel to previous post
 						$req = $con->prepare("
 						SELECT t1.id
 						FROM 
@@ -157,8 +166,12 @@
 
    </section> <!-- /content --> 
 
-	<?php
+	<?php // Import the footer links
 	include('../layout/users/footer_users.php');
+	?>
+	
+	<?php // Import the cookie banner always seen if not closed
+	include('../layout/users/Cookie_banner.php');
 	?>
 
 </body>

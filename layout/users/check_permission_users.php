@@ -12,8 +12,7 @@
 	
 	/*If the status of the website is ".Maint.", then the user will not access the
 	website and the maintenance webpage will be shown*/
-	if(!isset($_SESSION)){session_start();}
 	if($eta_web_sit['eta'] == '.MAINT.'){
 		header('Location: ../maintenance.php');
 	}
-?> 
+?>

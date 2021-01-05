@@ -57,7 +57,12 @@ a, a:visited {
 }
 a:hover, a:focus {
 	color: #31484d;
+	cursor: pointer;
 }
+
+/*a.pointer:hover { 
+	cursor: pointer;
+ }*/
 
 /* Typography
 --------------------------------------------------------------------- */
@@ -1400,7 +1405,7 @@ hr {
 	width: 80%;
 	margin: 0 auto;
 	display: block;
-	z-index: 889;
+	z-index: 9;
 	position: relative;
 }
 .hero-content .flex-control-nav li {
@@ -1469,4 +1474,49 @@ hr {
 }
 #journal #blog-wrapper article {
 	margin-bottom: 24px;
+}
+
+/* 
+/*  P. Cookie banner
+/* =================================================================== */
+
+.cookie-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 1rem 2rem;
+  background: #FFFFFF;
+  transition: all .75s cubic-bezier(.19,1,.22,1);
+  display:table-row;  
+  z-index: 10;
+  
+  &--hide {
+    opacity: 0;
+    bottom: -100%;
+  }
+}
+
+.cookie-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.65rem 0.85rem;
+  margin-left: 0.45rem;
+  color: #fff;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  background-color: #000000;
+}
+
+#leftbox-banner {
+	float:left; 
+	/*background : Red;*/	 
+	display:table-cell;  
+}
+
+#rightbox-banner {
+	float:left; 
+	/*background : Blue;*/
+	display:table-cell;  	
 }

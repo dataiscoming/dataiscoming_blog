@@ -1,11 +1,4 @@
-<html>
-	<head>
-		<!-- Script to ask a confirmation -->
-		<script type="text/javascript">
-			function confirmation_suppr(url){if(confirm("Are you sur to delete ?")){location.href=url;}}
-		</script>
-	</head>
-	
+<html> 
 	
 	<?php 
 		// Header section for the admin

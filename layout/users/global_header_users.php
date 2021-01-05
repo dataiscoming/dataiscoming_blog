@@ -2,7 +2,7 @@
 
    <!--- Basic Page Needs
    ================================================== -->
-   <meta charset="utf-8">
+    <meta charset="utf-8">
 	<title>Data is coming</title>
 	<meta name="description" content="a blog about Game Of Thrones and data science">  
 	<meta name="author" content="Quentin Mouton">
@@ -37,3 +37,7 @@
 <script src="../js/backstretch.js"></script> 
 <script src="../js/waypoints.js"></script>
 <script src="../js/main.js"></script> 
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/SendEvent.js"></script>
+<script type="text/javascript" src="../js/FadeBanner.js"></script>

@@ -4,6 +4,8 @@
 <div class="vertical-menu">
 
   <a href="#" class="active">Home</a>
+  <!-- Go to the dashboard -->
+  <a href="#">Dashboard</a>
   <!-- Go to the blog -->
   <a href="../../users/index_users.php?page=posts">Blog</a>
   <!-- Go to posts index-->

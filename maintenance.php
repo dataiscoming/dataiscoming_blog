@@ -20,7 +20,7 @@
     <div>
         <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:contact@dataiscoming.fr">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
         <p>&mdash; Data is coming</p> 
-		<a  href='../admin/connect_admin_form.php'>Admin</a>
+		<a  href='admin/login/login_admin_form.php'>Admin</a>
 	</div><br><br>
 </article>
 

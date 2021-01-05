@@ -21,7 +21,7 @@
 	         <div id="blog-wrapper" class="bgrid-third s-bgrid-half mob-bgrid-whole group">
 
 			<?php
-			// Connection to the database and get all the posts
+			// Connection to the database
 			include('../database/db_open.php');
 	
 			// Number of posts in the pages 
@@ -33,15 +33,17 @@
 			$totalPosts = $stmt->rowCount();
 			$PageNumber  = ceil($totalPosts / $PostPerPage);
 			
+			// Set the actual page to 1
 			$page = 1;
 			
+			// Change the value of the page if it was changed earlier
 			if (isset($_GET['n'])){                    
 				$page = $_GET['n'];
 			}else{ 
 				$page = 1;
 			}	
 			
-			// 
+			// Select the first message to be shown
 			$FirstMessage = ($page - 1) * $PostPerPage; 
 						
 			// Get the posts selected
@@ -51,16 +53,22 @@
 			$req->bindValue('PostPerPage', $PostPerPage, PDO::PARAM_INT);
 			$req->execute();
 			
+			// Loop to show every message of the page
 			while ($data= $req ->fetch(PDO::FETCH_ASSOC)){
 			
 			?>
 			<article class="bgrid">
-						
+					
+				<!-- Show the date of the article -->			
 				<h5><?php echo date('d/m/Y ', $data['timestamp']); ?></h5>
-	            <h3><a href="single.php?id_post=<?php echo $data['id'] ?>"><?php echo $data['title'] ?> </a></h3>
-	                              
+				
+				<!-- Show the title of the post - link to the post -->
+	            <div onclick="SendEvent(LINK='../users/single.php?id_post=<?php echo $data['id'] ?>', ELEMENT='<?php echo $data['id'] ?>')">
+					<h3><a class="pointer"><?php echo $data['title'] ?></a></h3>
+				<div>
 	            <p>
 				<?php 
+				// Show the abstract of the post
 				#$mess = nl2br($data['corpus']);	
 				#echo substr($mess,0,strpos($mess, '.',100));
 				$mess = nl2br($data['abstract']);
@@ -70,7 +78,7 @@
 	                        
 	        </article>
 			<?php
-			}
+			} // End of the loop showing the abstract of the posts
 			?>      
 
 	         </div> <!-- /blog-wrapper -->
