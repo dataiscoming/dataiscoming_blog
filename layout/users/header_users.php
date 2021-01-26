@@ -5,7 +5,10 @@
 <!-- Header
 =================================================== -->
 <header id="main-header">
-   
+
+	<!-- Target of the button top located in the footer -->
+    <div id="top"></div>
+	
     <div id="log"></div>
 
    	<div class="row header-inner">

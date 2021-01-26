@@ -297,6 +297,10 @@ input[type="checkbox"] {
 	display: inline;
 }
 
+.required_field{
+	color: #cf2147;
+}
+
 /* 
 /* d. Preloader
 /* =================================================================== */
@@ -569,6 +573,26 @@ button.full-width, .button.full-width {
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
+}
+
+button.comment_form_disabled{
+	background: #92959c; /* gris */
+	color: white;
+}
+	
+button.comment_form_disabled:hover{
+	background: #92959c; /* gris */
+	color: white;
+}
+
+button.comment_form_abled{
+	background: #818fab; /* bleu gris claire */
+	color: white;
+}
+	
+button.comment_form_abled:hover{
+	background: #647495; /* bleu gris foncé */
+	color: white;
 }
 
 /* 
@@ -1091,13 +1115,13 @@ footer #go-top {
 	position: fixed;
 	bottom: 0;
 	right: 30px;
-	z-index: 900;
+	z-index: 700;
 	display: none;
 }
 footer #go-top a {
 	display: block;
 	padding: 12px 30px;
-	background: #d44d0d;
+	background: #c3d7db;
 	color: white;
 	text-align: center;
 	font: 12px/24px "raleway-heavy", sans-serif;
@@ -1113,10 +1137,9 @@ footer #go-top a span {
 	margin-right: 10px;
 }
 footer #go-top a:hover {
-	background: #faec09;
-	color: #252525;
+	background: #cadde1;
+	color: #575859;
 }
-
 
 /* 
 /* j. Common and shared styles

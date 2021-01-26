@@ -41,13 +41,13 @@ function SendEvent(LINK, ELEMENT){
 	
 		function return_string(data_result){
 			if(data_result.substring(0, 7) == "	Succes" & LINK != "https://github.com/dataiscoming"){
-				alert('1'+data_result);
+				//alert('1'+data_result); // test
 				window.location.replace(LINK);
 			} else if(data_result.substring(0, 7) == "	Succes" & LINK == "https://github.com/dataiscoming"){
-				alert('2'+data_result);
+				//alert('2'+data_result); //test
 				//window.open(LINK,"CNN_WindowName", strWindowFeatures); //other solution
 			} else if(data_result.substring(0, 7) == " Failed"){
-				alert('2'+data_result)
+				// alert('2'+data_result) // test
 				console.log(data_result);
 			}
 		}	

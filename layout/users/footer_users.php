@@ -38,7 +38,12 @@
 
         </div>
 
-        <p class="copyright">&copy; Copyright 2014 Puremedia. Design by Styleshout.</p>        
+        <p class="copyright">&copy; Copyright 2014 Puremedia. Design by Styleshout.</p> 
+
+		<!-- Button to go to the top -->
+		<div id="go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top"><span>Top</span><i class="fa fa-long-arrow-up"></i></a>
+        </div>		
 
 	</div> <!-- /row -->
 	  

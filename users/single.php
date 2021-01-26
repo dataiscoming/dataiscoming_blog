@@ -75,7 +75,7 @@ include('../layout/users/Save_session.php')
 
 	   	<div id="main" class="tab-whole eight columns">
 
-	         <article class="entry">
+	        <article class="entry">
 
 					<header class="entry-header">
 
@@ -151,16 +151,138 @@ include('../layout/users/Save_session.php')
 		  			     				   
 	  				</div>  
 
-				</article> <!-- /entry -->							   
+				<div> <!--comment-->
+				
+				<?php
+				// Query to select the post identified thanks to the variable id_post
+				$req = $con->prepare("SELECT *
+				FROM comments 
+				WHERE ID_post=:id_post 
+				ORDER BY order_reply");
+				$req->bindValue('id_post', $id_post, PDO::PARAM_STR);
+				$req->execute();
+				
+				if($req == TRUE){
+					$count = $req->rowCount();
+				} else {
+					echo("Issue in the query !");
+				}
+				?>
+				
+					<?php // Count of the number of comments
+					if($count > 1){
+						echo("<h3>".$count." Comments</h3>");
+					} else if($count == 1){
+						echo("<h3>1 Comment</h3>");
+					} else{
+						echo("<h3>No Comment yet</h3>");
+					}
+					?>
+				
+					<ol class="commentlist">
+					
+					<?php
+					// Loop to show all comment for this post
+					while ($data= $req ->fetch(PDO::FETCH_ASSOC)){
+						
+						// Condition to open a reply
+						if($data['level_reply'] > 1){
+							echo("<ul class='children'>");
+						}
+						
+						// Comment
+						echo("<li class='depth-".$data['level_reply']."'> 
+
+								<div class='comment-content'>
+
+									<div class='comment-info'>
+										<cite>".$data['user_name']."</cite>
+
+										<div class='comment-meta'>
+											<time>".$data['date_comment']." </time>@<time> ".$data['time_comment']."</time>
+											<span class='sep'>/</span><a href='single.php?id_post=".$id_post."&max=".$data['max_reply']."&level=".$data['level_reply']."&order=".$data['order_reply']."&previous=".$data['id_comment']."#comment' class='reply'>Reply</a>
+										</div>
+									</div>
+
+									<div class='comment-text'>
+										<p>".$data['text_comment']."</p>
+									</div>
+
+								</div>
+							
+							</li>");
+
+						// condition to close the reply
+						if($data['level_reply'] == $data['max_reply'] & $data['level_reply'] > 1){
+							for($i = 1; $i < $data['max_reply']; $i++){
+								echo("</ul>");
+							}	
+						}
+					}
+					?>
+						
+					</ol>
+				
+					<!-- respond -->
+					<div id="comment" class="respond">
+
+						<h3>Leave a Comment</h3>
+						
+						<!-- form -->
+						<form action="comment.php" method="post" id="contactForm" name="contactForm">
+							<fieldset>
+
+							<div class="group">
+	  						   <label for="cName">Name <span class="required_field">*</span></label>
+	  						   <input class="required" type="text" value="" size="70" id="cName" name="cName">
+							</div>
+
+							<div class="group">
+	  						   <label for="cEmail">Email <span class="required_field">* </span></label>
+	  						   <input class="required" type="email" value="" size="70" id="cEmail" name="cEmail" required>
+							</div>
+
+							<div class="website_group">
+	  						   <label for="cWebsite">Website</label>
+	  						   <input type="text" value="" size="70" id="cWebsite" name="cWebsite">
+							</div>
+
+							<div class="group">
+								<label for="cMessage">Message <span class="required_field">*</span></label>
+								<!--<input class="required" type="text" value="" size="80" id="cMessage" name="cMessage">-->
+								<textarea  class="required" cols="80" rows="10" id="cMessage" name="cMessage"></textarea>
+							</div>
+
+							<?php
+							if(isset($_GET['max']) & isset($_GET["level"]) & isset($_GET["order"])){
+							?>
+							<input type="hidden" id="max" name="max" value=<?php echo $_GET['max'];?> >
+							<input type="hidden" id="level" name="level" value=<?php echo $_GET["level"];?> >
+							<input type="hidden" id="order" name="order" value=<?php echo $_GET["order"];?> >
+							<input type="hidden" id="id_previous_comment" name="id_previous_comment" value=<?php echo $_GET["previous"];?> >
+							<?php } ?>
+							<input type="hidden" id="id_post" name="id_post" value=<?php echo $id_post;?> >
+							<label><span class="required_field">* : required</span></label>
+							<button id="comment_form" class="comment_form_disabled" type="submit" name="action" value="Send" disabled="disabled">Submit</button>
+								<!-- class="stroke medium" style="background-color:#cadde1"-->
+	  					</fieldset>
+						
+	  				   </form> <!-- /contactForm -->
+
+					</div> <!-- /respond -->
+
+				</div> <!-- /comments -->
+
+			</article> <!-- /entry -->							   
 	         
 	   	</div> <!-- /main -->  
 
-	      <div class="tab-whole four columns end" id="secondary">
+	    <div class="tab-whole four columns end" id="secondary">
 				
 			<aside id="sidebar">
 	        </aside> <!-- /sidebar -->	            
 
-	      </div> <!-- /secondary -->
+	    </div> <!-- /secondary -->
 
 	   </div> <!-- /row -->      
 
